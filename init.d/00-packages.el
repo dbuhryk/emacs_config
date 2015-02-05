@@ -19,6 +19,12 @@
 (defvar required-packages
   '(
     ;sbt-mode
+	;sublimity-mode
+	elscreen
+	switch-window
+	sublime-themes
+	magit
+	recentf
 	;scala-mode2
 	;ensime
 	;nyan-mode
