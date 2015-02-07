@@ -8,6 +8,7 @@
 	)
 
 (global-set-key (kbd "C-c g") 'magit-status)
+;;(global-set-key (kbd "C-c C-v m") 'magit-status)
 
 ;; store windows when invoking magit
 (defadvice magit-status (around magit-fullscreen activate)
