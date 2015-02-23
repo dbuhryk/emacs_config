@@ -10,4 +10,7 @@
 			))
 	)
 
+(autoload 'R-mode "ess-site.el" "" t)
+(add-to-list 'auto-mode-alist '("\\.R\\'" . R-mode))
 
+;(load "ess-site.el")

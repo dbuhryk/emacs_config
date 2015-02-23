@@ -31,6 +31,7 @@
 	ess
 	smex
 	window-number
+	tabbar
   ;window-numbering
 	;multiple-cursors
   ) "a list of packages to ensure are installed at launch.")

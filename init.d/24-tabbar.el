@@ -1,3 +1,4 @@
+;;****************************************************************
 ;; This are setting for nice tabbar items
 ;; to have an idea of what it looks like http://imgur.com/b0SNN
 ;; inspired by Amit Patel screenshot http://www.emacswiki.org/pics/static/NyanModeWithCustomBackground.png
@@ -55,6 +56,8 @@ That is, a string used to represent it on the tab bar."
                        (length (tabbar-view
                                 (tabbar-current-tabset)))))))))
  
+
+;;****************************************************************
 (tabbar-mode 1)
 
 (setq tabbar-cycle-scope 'tabs)
@@ -106,9 +109,11 @@ buffers with shortcuts.  Tested with GNU Emacs 23."
     (tabbar-mode t))
   (renew-tabbar-autohide-timer))))
 
+;;****************************************************************
 (autohide-tabbar)
 ;(setq tabbar-use-images nil)
 
+;;****************************************************************
 ;; maybe you will find this usefull
 ;; it moves the current tab left/right rearranging the
 ;; tabs (as in konsole for example)

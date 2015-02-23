@@ -1,3 +1,6 @@
+
+(setq default-directory (concat (getenv "HOME") "/Workspaces/emacs24"))
+
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 (setq inhibit-startup-message t)
