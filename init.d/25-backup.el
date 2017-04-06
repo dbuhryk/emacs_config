@@ -6,7 +6,7 @@
 If the new path's directories does not exist, create them."
   (let* (
         (backupRootDir "~/.emacs.d/emacs-backup/")
-        (filePath (replace-regexp-in-string "[A-Za-z]:" "" fpath )) ; remove Windows driver letter in path, ⁖ “C:”
+        (filePath (replace-regexp-in-string "[A-Za-z]:" "" fpath )) ; remove Windows driver letter in path, “C:”
         (backupFilePath (replace-regexp-in-string "//" "/" (concat backupRootDir filePath "~") ))
         )
     (make-directory (file-name-directory backupFilePath) (file-name-directory backupFilePath))
@@ -14,11 +14,11 @@ If the new path's directories does not exist, create them."
   )
 )
 
-(setq make-backup-file-name-function 'my-backup-file-name)
+;(setq make-backup-file-name-function 'my-backup-file-name)
 
 ;;****************************************************************
 ;; If you want all backup to be flat in a dir
-;(setq backup-directory-alist '(("" . "~/.emacs.d/emacs-backup")))
+(setq backup-directory-alist '(("" . "~/.emacs.d/emacs-backup")))
 
 
 ;;****************************************************************

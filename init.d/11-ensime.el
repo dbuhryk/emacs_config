@@ -6,26 +6,6 @@
 ;(setq ensime-graphical-tooltips nil)
 ;(setq ensime-tooltip-type-hints t)
 
-(cond ((eq system-type 'windows-nt)
-       (progn
-	 (setenv "SBT_HOME" "C:\\Users\\edzmbuh\\Apps\\sbt-0.13.7\\bin")
-	 (setenv "SCALA_HOME" "C:\\Users\\edzmbuh\\Apps\\scala-2.11.4\\bin")
-	 (setenv "JAVA_HOME" "C:\\Program Files\\Java\\jdk1.8.0_25\\bin")
-	 (setenv "JDK_HOME" "C:\\Program Files\\Java\\jdk1.8.0_25\\bin")
-	 (setenv "PATH" (concat (getenv "PATH") ";" (getenv "SBT_HOME") ";" (getenv "SCALA_HOME") ))
-	 (setq ensime-sbt-command (concat (getenv "SBT_HOME") "\\sbt.bat" ))
-	 ))
-      ((eq system-type `cygwin)
-       (progn
-     (setenv "SBT_HOME" "/cygdrive/c/Users/edzmbuh/Apps/sbt-0.13.7/bin")
-     (setenv "SCALA_HOME" "/cygdrive/c/Users/edzmbuh/Apps/scala-2.11.4/bin")
-	 (setenv "JAVA_HOME" "/cygdrive/c/Program Files/Java/jdk1.8.0_25/bin")
-	 (setenv "JDK_HOME" "/cygdrive/c/Program Files/Java/jdk1.8.0_25/bin")
-	 (setenv "PATH" (concat (getenv "PATH") ":" (getenv "SBT_HOME") ":" (getenv "SCALA_HOME") ))
-	 (setq ensime-sbt-command (concat (getenv "SBT_HOME") "/sbt.bat" ))
-	 ))
-      )
-
 ;(setq exec-path (append exec-path (getenv "SBT_HOME")))
 ;;(setenv "PATH" (concat (getenv "PATH") ":" (getenv "SBT_HOME") ))
 (defun killall-java ()

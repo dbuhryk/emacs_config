@@ -25,13 +25,17 @@
 	sublime-themes
 	magit
 	recentf
-	;scala-mode2
-	;ensime
+	scala-mode2
+	ensime
+  ess
 	;nyan-mode
 	ess
 	smex
 	window-number
 	tabbar
+  helm
+  org
+  org-plus-contrib
   ;window-numbering
 	;multiple-cursors
   ) "a list of packages to ensure are installed at launch.")

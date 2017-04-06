@@ -73,44 +73,46 @@ That is, a string used to represent it on the tab bar."
            (list ".emacs.d"))
           (t (list dir))))))
 
-(defun autohide-tabbar ()
- "Make tabbar briefly show itself while you are switching
-buffers with shortcuts.  Tested with GNU Emacs 23."
- (defvar *tabbar-autohide-delay* 3)
-
-(interactive)
-(tabbar-mode nil)
-(defvar *tabbar-autohide-timer* nil)
-(defun renew-tabbar-autohide-timer ()
- (if (timerp *tabbar-autohide-timer*)
-     (cancel-timer *tabbar-autohide-timer*))
- (setf *tabbar-autohide-timer*
-       (run-with-timer
-        3 nil (lambda ()
-                (tabbar-mode nil)
-                (setf *tabbar-autohide-timer*
-                      nil)))))
-
-(global-set-key
-    [C-next]
-    (lambda ()
-      (interactive)
-      (if tabbar-mode
-          (tabbar-forward)
-        (tabbar-mode t))
-      (renew-tabbar-autohide-timer)))
-
-(global-set-key
-[C-prior]
-(lambda ()
-  (interactive)
-  (if tabbar-mode
-      (tabbar-backward)
-    (tabbar-mode t))
-  (renew-tabbar-autohide-timer))))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; (defun autohide-tabbar ()					    ;;
+;;  "Make tabbar briefly show itself while you are switching	    ;;
+;; buffers with shortcuts.	 Tested with GNU Emacs 23."	    ;;
+;; (defvar *tabbar-autohide-delay* 3)				    ;;
+;; 								    ;;
+;; (interactive)						    ;;
+;; (tabbar-mode nil)						    ;;
+;; (defvar *tabbar-autohide-timer* nil)				    ;;
+;; (defun renew-tabbar-autohide-timer ()			    ;;
+;;  (if (timerp *tabbar-autohide-timer*)			    ;;
+;;      (cancel-timer *tabbar-autohide-timer*))			    ;;
+;;  (setf *tabbar-autohide-timer*				    ;;
+;;        (run-with-timer					    ;;
+;; 	3 nil (lambda ()					    ;;
+;; 		(tabbar-mode nil)				    ;;
+;; 		(setf *tabbar-autohide-timer*			    ;;
+;; 		      nil)))))					    ;;
+;; 								    ;;
+;; (global-set-key						    ;;
+;;     [C-next]							    ;;
+;;     (lambda ()						    ;;
+;;       (interactive)						    ;;
+;;       (if tabbar-mode					    ;;
+;; 	  (tabbar-forward)					    ;;
+;; 	(tabbar-mode t))					    ;;
+;;       (renew-tabbar-autohide-timer)))			    ;;
+;; 								    ;;
+;; (global-set-key						    ;;
+;; [C-prior]							    ;;
+;; (lambda ()							    ;;
+;;   (interactive)						    ;;
+;;   (if tabbar-mode						    ;;
+;;       (tabbar-backward)					    ;;
+;;     (tabbar-mode t))						    ;;
+;;   (renew-tabbar-autohide-timer))))				    ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;****************************************************************
-(autohide-tabbar)
+;(autohide-tabbar)
 ;(setq tabbar-use-images nil)
 
 ;;****************************************************************

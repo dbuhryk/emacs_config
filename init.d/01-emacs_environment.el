@@ -1,5 +1,5 @@
 
-(setq default-directory (concat (getenv "HOME") "/Workspaces/emacs24"))
+;;(setq default-directory (concat (getenv "HOME") "/Workspaces/emacs24"))
 
 (tool-bar-mode -1)
 (menu-bar-mode -1)
@@ -19,6 +19,14 @@
 (global-set-key (kbd "C-+") 'text-scale-increase)
 (global-set-key (kbd "C-=") 'text-scale-increase)
 (global-set-key (kbd "C--") 'text-scale-decrease)
+
+
+;;****************************************************************
+;; smooth scrolling
+(setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; one line at a time
+(setq mouse-wheel-progressive-speed nil) ;; don't accelerate scrolling
+(setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
+(setq scroll-step 1) ;; keyboard scroll one line at a time
 
 ;;****************************************************************
 ;; misc
@@ -134,4 +142,8 @@ With prefix ARG, silently save all file-visiting buffers, then kill."
 ;;Make Emacs stop asking “Active processes exist; kill them and exit anyway”
 (defadvice save-buffers-kill-emacs (around no-query-kill-emacs activate)
   "Prevent annoying \"Active processes exist\" query when you quit Emacs."
+<<<<<<< 94ed9c4ffbba17720fcb3607ee38263e28049915
   (flet ((process-list ())) ad-do-it))
+=======
+  (cl-flet ((process-list ())) ad-do-it))
+>>>>>>> More packages
