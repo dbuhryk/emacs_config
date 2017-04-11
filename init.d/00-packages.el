@@ -47,6 +47,7 @@
 	latex-preview-pane
 	ghci-completion
 	ghc
+	avk-emacs-themes
   ) "a list of packages to ensure are installed at launch.")
 
 ; method to check if all packages are installed

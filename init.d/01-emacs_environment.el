@@ -15,6 +15,10 @@
 ; (global-linum-mode 1)
 
 ;;****************************************************************
+;; Theme
+(load-theme 'manoj-dark)
+
+;;****************************************************************
 ;; zoom
 (global-set-key (kbd "C-+") 'text-scale-increase)
 (global-set-key (kbd "C-=") 'text-scale-increase)
