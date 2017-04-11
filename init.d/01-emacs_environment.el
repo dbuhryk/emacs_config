@@ -142,8 +142,4 @@ With prefix ARG, silently save all file-visiting buffers, then kill."
 ;;Make Emacs stop asking “Active processes exist; kill them and exit anyway”
 (defadvice save-buffers-kill-emacs (around no-query-kill-emacs activate)
   "Prevent annoying \"Active processes exist\" query when you quit Emacs."
-<<<<<<< 94ed9c4ffbba17720fcb3607ee38263e28049915
-  (flet ((process-list ())) ad-do-it))
-=======
   (cl-flet ((process-list ())) ad-do-it))
->>>>>>> More packages

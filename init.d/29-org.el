@@ -40,9 +40,9 @@
 			))
 	)
 
-(org-babel-do-load-languages
-	'org-babel-load-languages
-	'((R . t)
-		))
+;(org-babel-do-load-languages
+;	'org-babel-load-languages
+;	'((R . t)
+;		))
       ;'((emacs-lisp . nil)
       ;  (R . t)))

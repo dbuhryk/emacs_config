@@ -1,3 +1,4 @@
+(require 'latex-preview-pane)
 (cond ((eq system-type 'windows-nt)
        (progn
 	 (setenv "ISPELL_PATH" "C:\\Users\\edzmbuh\\Apps\\Aspell\\bin\\")

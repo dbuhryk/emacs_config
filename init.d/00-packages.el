@@ -25,7 +25,7 @@
 	sublime-themes
 	magit
 	recentf
-	scala-mode2
+	;scala-mode2
 	ensime
   ess
 	;nyan-mode
@@ -33,11 +33,20 @@
 	smex
 	window-number
 	tabbar
+	dirtree
   helm
   org
   org-plus-contrib
   ;window-numbering
-	;multiple-cursors
+	multiple-cursors
+	projectile
+	key-chord
+	git-gutter
+	minimap
+	color-theme
+	latex-preview-pane
+	ghci-completion
+	ghc
   ) "a list of packages to ensure are installed at launch.")
 
 ; method to check if all packages are installed
